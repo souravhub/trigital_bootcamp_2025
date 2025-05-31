@@ -2,6 +2,9 @@
 // $route
 // $router
 export default {
+	data() {
+		return {};
+	},
 	methods: {
 		goToAbout() {
 			// this.$router.push("/about");
@@ -12,6 +15,12 @@ export default {
 			// form submit
 			// api call
 			this.$router.push("/");
+		},
+		goToProfile() {
+			// this.$router.push("/profile/info");
+		},
+		goToOrderList() {
+			this.$router.push({ name: "Order List" });
 		},
 	},
 	mounted() {},
@@ -28,6 +37,8 @@ export default {
 	<hr />
 	<button @click="goToAbout">About</button>
 	<button @click="goToHome">Home</button>
+	<button @click="goToProfile">Profile</button>
+	<button @click="goToOrderList">My Orders</button>
 
 	<br />
 	<hr />
@@ -48,5 +59,9 @@ a {
 	padding: 3px 4px;
 	color: white;
 	background: red;
+}
+button {
+	margin: 0px 8px;
+	cursor: pointer;
 }
 </style>
